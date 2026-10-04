@@ -1,16 +1,26 @@
-# Batalhas 2D em Godot — Victor Bispo
+# Batalhas 2D em Godot - Victor Bispo
 
-Protótipo com ataque por precisão, esquiva de projéteis e três dificuldades. A lógica da batalha fica separada da interface.
+Meu protótipo combina ataque por precisão, esquiva de projéteis e três dificuldades. No meu projeto, a lógica da batalha fica separada da interface.
 
-![Captura real da execução](https://victor-bispo-portfolio.netlify.app/assets/batalhas.png)
+![Captura real do meu protótipo](https://victor-bispo-portfolio.netlify.app/assets/batalhas.png)
 
-## Como executar
+## O que tenho neste projeto
 
-Abra `project.godot` no Godot 4 e pressione F6 na cena principal ou F5 para executar o projeto. O registro original de validação usou Godot 4.7.2 e renderizador Compatibility.
+- Ataque com marcador de precisão e fase de esquiva de oito segundos.
+- Três padrões de projéteis: chuva vertical, corredores horizontais e disparos com mira travada.
+- Menu, seleção de dificuldade, pausa, vitória, derrota e reinício.
+
+## Minha participação
+
+Usei IA no desenvolvimento deste projeto. Nos meus projetos pessoais, revisei e melhorei parte dos códigos.
+
+## Como executar meu protótipo
+
+Abra `project.godot` no Godot 4 e pressione F6 na cena principal ou F5 para executar o projeto. Nos registros originais do meu projeto, a validação usou Godot 4.7.2 e renderizador Compatibility.
 
 Controles: WASD/setas para movimento, Shift para reduzir a velocidade, Espaço/Enter para confirmar o ataque, Esc para pausa, R para reinício e B para voltar ao menu. As teclas 1/2/3 selecionam a dificuldade no menu.
 
-## Arquitetura
+## Organização do meu código
 
 - `battle.gd`: estados, energia, precisão, padrões e colisões.
 - `main.gd`: entrada, desenho da interface e apresentação dos estados.
@@ -18,9 +28,7 @@ Controles: WASD/setas para movimento, Shift para reduzir a velocidade, Espaço/E
 - `tests/verify_battle.gd`: verificações da lógica.
 - `tests/verify_scene.gd`: verificações da cena e da entrada.
 
-Os três padrões de projéteis alternam chuva vertical, corredores horizontais e disparos com mira travada. A fase de esquiva dura oito segundos.
-
-## Testes
+## Testes do meu projeto
 
 Com o executável Godot disponível no PATH:
 
@@ -29,8 +37,8 @@ godot --headless --path . --script res://tests/verify_battle.gd
 godot --headless --path . --script res://tests/verify_scene.gd
 ```
 
-Os logs preservados em `docs/` registram 8.669 verificações e zero falhas funcionais na lógica, e zero falhas na cena. Esses dois logs são registros da execução anterior. Uma nova execução do pacote organizado em 4 de outubro de 2026 confirmou 8.669 verificações sem falhas e zero falhas de cena: `docs/verify_battle-publicacao.log` e `docs/verify_scene-publicacao.log`. Os ciclos completos usaram invulnerabilidade; não há validação humana da dificuldade. Os logs registram também avisos do armazenamento de certificados e de gravação do log interno no ambiente restrito de validação; os resultados funcionais acima foram produzidos apesar desses avisos.
+Tenho registros de 8.669 verificações sem falhas na lógica e zero falhas na cena. Meu pacote passou por uma nova conferência em 4 de outubro de 2026, com os mesmos resultados. Reúno os [logs da publicação no meu portfólio](https://victor-bispo-portfolio.netlify.app/evidencias/batalhas.html#validacao).
 
-## Participação
+Ainda preciso avaliar a dificuldade com jogadores: os ciclos completos dos testes usaram invulnerabilidade. Nos logs do meu projeto, há avisos de certificados e de gravação do log interno, além dos resultados funcionais.
 
-Projeto pessoal de Victor Bispo desenvolvido com apoio de IA. A participação informada por Victor inclui revisão e melhoria de parte dos códigos nos projetos pessoais.
+[Meu portfólio](https://victor-bispo-portfolio.netlify.app/)
